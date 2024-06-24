@@ -642,3 +642,122 @@
 # print(flatten(exemple))
 
 
+# 튜플: 리스트와 비슷한 자료형으로 한번 결정된 요소는 바꿀 수 없다.
+# 람다: 1회용 함수이다
+
+# tuple_test=(10,20,30)
+# tuple_test[0]
+# print(tuple_test[0])
+
+# 요소를 하나만 가지를 튜플을 선언할 때는  (n,) 쉼표를 넣어줘야 한다. 넣어주지 않으면 그냥 괄호친 것으로 생각
+
+# [a,b]=[10,20]
+# (c,d)=(10,20)
+# print(d)
+
+# # 괄호를 생략해도 튜플로 인식할 수 있는 경우 괄호는 생략해도 된다.
+# # 리스트나 튜플을 딕셔너리처럼 매핑할 수 잇더
+
+# a,b=10,20
+
+# print(a)
+
+# a,b=b,a
+# print(a)
+# a=30
+# print(a)
+# 튜플을 이용해서 값을 교환할 수 있다.
+
+# 함수의 리턴에 튜플을 사용하면 여러 개의 값을 리턴하고 할당할 수 있다.
+
+
+# def call_10_times(func):
+#   for i in range(10):
+#     func()
+
+# def print_hello():
+#   print("안녕하세요")
+
+# call_10_times(print_hello)
+
+# def power(item):
+#   return item*item
+# def under_3(item):
+#   return item<3
+
+# power = lambda x:x*x
+# under_3=lambda x:x<3
+
+# 람다는 함수의 매개변수에 곧바로 넣을 수 있다.abs
+
+
+# list_input_a=[1,2,3,4,5]
+
+# output_a=map(lambda x:x*x,list_input_a)
+# print(output_a)
+# print(list(output_a))
+# print()
+
+# output_b=filter(lambda x:x<3,list_input_a)
+# print(output_b)
+# print(list(output_b))
+
+# lambda 매개변수: 리턴값
+
+
+# 파일 객체 = open(문자열: 파일 경로, 문자열: 읽기 모드)
+
+# file=open("basic.txt","w")
+
+# file.write("hello python programming")
+
+# file.close()
+
+
+
+# with 키워드 -> with 구문이 종료될 때 자동으로 파일이 닫힌다.abs
+
+# with open("basic.txt","w") as file:
+#   file.write("hello")
+
+# with open("basic.txt","r") as file:
+#   contents=file.read()
+
+# print(contents)
+import random
+
+# hanguls=list("가나다라마바사아자차카타파하")
+
+# with open("info.txt","w") as file:
+#   for i in range(1000):
+#     name=random.choice(hanguls)+random.choice(hanguls)
+#     weight=random.randrange(40,100)
+#     height=random.randrange(140,200)
+#     file.write("{}, {}, {}\n".format(name,weight,height))
+
+
+with open("info.txt","r") as file:
+  for line in file:
+    (name,weight,height)=line.strip().split(", ")
+
+    if (not name) or (not weight) or (not height):
+      continue
+
+    bmi=int(weight)/((int(height)/100**2))
+    result=""
+    if 25<=bmi:
+      result="과체중"
+    elif 18.5<=bmi:
+      result="정상 체중"
+    else:
+      result="저체중"
+
+    print('\n'.join([
+      "이름: {}",
+      "몸무게: {}",
+      "키: {}",
+      "BMI: {}",
+      "결과: {}"
+    ]).format(name,weight,height,bmi,result))
+    print()
+
