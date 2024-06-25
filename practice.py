@@ -736,28 +736,88 @@ import random
 #     file.write("{}, {}, {}\n".format(name,weight,height))
 
 
-with open("info.txt","r") as file:
-  for line in file:
-    (name,weight,height)=line.strip().split(", ")
+# with open("info.txt","r") as file:
+#   for line in file:
+#     (name,weight,height)=line.strip().split(", ")
 
-    if (not name) or (not weight) or (not height):
-      continue
+#     if (not name) or (not weight) or (not height):
+#       continue
 
-    bmi=int(weight)/((int(height)/100**2))
-    result=""
-    if 25<=bmi:
-      result="과체중"
-    elif 18.5<=bmi:
-      result="정상 체중"
-    else:
-      result="저체중"
+#     bmi=int(weight)/((int(height)/100**2))
+#     result=""
+#     if 25<=bmi:
+#       result="과체중"
+#     elif 18.5<=bmi:
+#       result="정상 체중"
+#     else:
+#       result="저체중"
 
-    print('\n'.join([
-      "이름: {}",
-      "몸무게: {}",
-      "키: {}",
-      "BMI: {}",
-      "결과: {}"
-    ]).format(name,weight,height,bmi,result))
-    print()
+#     print('\n'.join([
+#       "이름: {}",
+#       "몸무게: {}",
+#       "키: {}",
+#       "BMI: {}",
+#       "결과: {}"
+#     ]).format(name,weight,height,bmi,result))
+#     print()
 
+
+# try:
+#   user_input_a=int(input("정수 입력> "))
+
+#   number_input_a=int(user_input_a)
+#   print("원의 반지름:",number_input_a)
+#   print("원의 둘레:",2*3.14*number_input_a)
+#   print("원의 넓이:",3.14*number_input_a*number_input_a)
+# except:
+#   print("정수를 입력하지 않았습니다.")
+
+
+
+# list_input_a=["52","273","32","스파이","103"]
+
+# list_number=[]
+# for item in list_input_a:
+#   try:
+#     float(item)
+#     list_number.append(item)
+#   except:
+#     pass
+# print(list_number)
+
+# try:
+#   number_input_a=int(input("정수입력>"))
+# except:
+#   print("정수를 입력하지 않았습니다.")
+# else:
+#   print("원의 반지름:",number_input_a)
+#   print("원의 둘레:",2*3.14*number_input_a)
+#   print("원의 넓이:",3.14*number_input_a*number_input_a)
+# finally:
+#   print("일단 프로그램이 어떻게든 끝났습니다.")
+
+# try:
+#   file=open("info.txt","w")
+#   dsa
+# except:
+#   print("오류가 발생했습니다.")
+# finally:
+#   file.close()
+
+# print("파일이 제대로 닫혔는지 확인하기")
+# print(file.closed)
+
+def test():
+  print("test() 함수의 첫 줄입니다.")
+  try:
+    print("try 구문이 실행되었습니다.")
+    return
+    print("try 구문의 return 키워드 뒤입니다.")
+  except:
+    print("except 구문이 실행되었다.")
+  else:
+    print("else 구문이 실행되었습니다.")
+  finally:
+    print("finally 구문이 실행되었다.")
+  print("마지막 줄")
+test()
