@@ -807,17 +807,48 @@ import random
 # print("파일이 제대로 닫혔는지 확인하기")
 # print(file.closed)
 
-def test():
-  print("test() 함수의 첫 줄입니다.")
-  try:
-    print("try 구문이 실행되었습니다.")
-    return
-    print("try 구문의 return 키워드 뒤입니다.")
-  except:
-    print("except 구문이 실행되었다.")
-  else:
-    print("else 구문이 실행되었습니다.")
-  finally:
-    print("finally 구문이 실행되었다.")
-  print("마지막 줄")
-test()
+# def test():
+#   print("test() 함수의 첫 줄입니다.")
+#   try:
+#     print("try 구문이 실행되었습니다.")
+#     return
+#     print("try 구문의 return 키워드 뒤입니다.")
+#   except:
+#     print("except 구문이 실행되었다.")
+#   else:
+#     print("else 구문이 실행되었습니다.")
+#   finally:
+#     print("finally 구문이 실행되었다.")
+#   print("마지막 줄")
+# test()
+
+
+# try:
+#   number_input_a=int(input("정수 입력>"))
+#   print("원의 반지름:",number_input_a)
+#   print("원의 둘ㄹ레:",2*3.14*number_input_a)
+#   print("원의 넓이:",3.14*number_input_a*number_input_a)
+# except Exception as exception:
+#   print("type(exception):",type(exception))
+#   print("exception:",exception)
+
+
+# list_number=[52,273,32,72,100]
+
+# try:
+#   number_input = int(input("정수 입력>"))
+#   print("{}번쨰 요소: {}".format(number_input,list_number[number_input]))
+#   예외.발생해주세요()
+# except ValueError:
+#   print("정수를 입력해주세요")
+# except IndexError:
+#   print("리스트의 인덱스릏 벗어났어요")
+# except Exception:
+#   print("미리 파악하지 못한 예외가 발생했습니다.")
+
+
+number=int(input("정수 입력>"))
+if number>0:
+  raise NotImplementedError
+else:
+  raise NotImplementedError
