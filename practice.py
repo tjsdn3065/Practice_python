@@ -847,8 +847,63 @@ import random
 #   print("미리 파악하지 못한 예외가 발생했습니다.")
 
 
-number=int(input("정수 입력>"))
-if number>0:
-  raise NotImplementedError
-else:
-  raise NotImplementedError
+# number=int(input("정수 입력>"))
+# if number>0:
+#   raise NotImplementedError
+# else:
+#   raise NotImplementedError
+
+# from math import sin,cos,tan,floor,ceil
+# print(sin(1))
+
+# import math as m
+
+# print(m.sin(1))
+
+# import random
+
+# print(random.random())
+
+# print(random.uniform(10,20))
+
+# print(random.randrange(10))
+
+# print(random.choice([1,2,3,4,5]))
+
+# print(random.shuffle([1,2,3,4,5]))
+
+# print(random.sample([1,2,3,4,5],k=2))
+
+# from random import random, randrange,uniform,choice,shuffle,sample
+
+
+
+# import sys
+
+# print(sys.argv)
+
+
+# print(sys.copyright)
+
+# print(sys.version)
+
+# sys.exit()
+
+# import os
+
+# print(os.name)
+# print(os.getcwd())
+# print(os.listdir())
+
+# #os.mkdir("hello")
+# #os.rmdir("hello")
+
+# # with open("original.txt","w") as file:
+# #   file.write("hello")
+# # os.rename("original.txt","new.txt")
+
+# #os.remove("new.txt")
+
+# os.system("dir")
+
+# operator 모듈의 itemgetter() 함수는 특정 요소를 추출하는 함수를 만드는 함수
